@@ -3,7 +3,6 @@ import os
 
 os.makedirs("plots", exist_ok=True)
 
-# Example: save top parts chart
 if "part_name" in df.columns:
     top_parts = df["part_name"].value_counts().head(10)
 
