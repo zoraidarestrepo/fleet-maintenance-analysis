@@ -11,9 +11,9 @@ Highlights:
 •	Identified cost and failure trends by region
 •	Built KPI dashboards in Power BI
 
+
 Structure:
 /fleet-maintenance-data-analysis
  ├── /data              → FleetMaintenanceRecords.csv
  ├── /sql               → fleet_analysis_queries.sql
  └── /reports           → powerbi_dashboard
-<img width="468" height="348" alt="image" src="https://github.com/user-attachments/assets/7074d07c-0e34-43fb-aa8c-9625c74e47c3" />
