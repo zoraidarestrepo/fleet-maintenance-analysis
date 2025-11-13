@@ -11,10 +11,13 @@ CSV dataset of fleet maintenance logs including part IDs, service timestamps, mi
 ### Tools:
 
 - MySQL — Imported and queried the fleet maintenance dataset [Download Here](https://github.com/user-attachments/files/23528910/fleet_maintenance_schema.sql)
-- Python (Pandas, NumPy) — Data cleaning, transformation, and trend analysis
+  
+- Python (Pandas, NumPy) — Data cleaning, transformation, and trend analysis [Download Here](https://github.com/user-attachments/files/23529746/fleet_maintenance_analysis_pandas_numpy.1.py)
+  
 - Excel — Initial data inspection and verification [Download Here](https://github.com/user-attachments/files/23528645/FleetMaintenanceRecords.xlsx)
 
 - Power BI — Visualized part failures, regional trends, and maintenance patterns
+  
 - Jupyter Notebook — Environment for exploratory and statistical analysis
 
 
