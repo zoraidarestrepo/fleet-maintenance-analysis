@@ -57,9 +57,10 @@ DIVIDE(
     [Total Cost],
     [Total Events],
     0
-)
+);
 
-##This report allows operations and maintenance teams to:
+
+## This report allows operations and maintenance teams to:
 
 - Quickly see which parts are failing most often
 
