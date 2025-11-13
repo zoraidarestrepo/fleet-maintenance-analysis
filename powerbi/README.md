@@ -2,6 +2,17 @@
 
 A Power BI report was built on top of the FleetMaintenanceRecords dataset to provide interactive, business-friendly insights.
 
+
+## This report allows operations and maintenance teams to:
+
+- Quickly see which parts are failing most often
+
+- Identify high-risk states or regions
+
+- Track trends in maintenance volume over time
+
+- Focus on cost drivers and opportunities for preventive maintenance
+
 ### Data Source
 - **Dataset:** FleetMaintenanceRecords (CSV/Excel)
 - **Loaded into Power BI** using Power Query
@@ -59,13 +70,3 @@ DIVIDE(
     0
 );
 
-
-## This report allows operations and maintenance teams to:
-
-- Quickly see which parts are failing most often
-
-- Identify high-risk states or regions
-
-- Track trends in maintenance volume over time
-
-- Focus on cost drivers and opportunities for preventive maintenance
