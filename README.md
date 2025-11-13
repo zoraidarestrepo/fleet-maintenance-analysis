@@ -311,16 +311,16 @@ Insight: Identifying high-frequency-breakdown vehicles allows targeted repair or
 
 Based on the findings, the fleet can improve performance through:
 
-### Data-driven Preventive Maintenance
+#### Data-driven Preventive Maintenance
 Predicting part failures by season, region, and historical trends.
 
-### Smarter Inventory Management
+#### Smarter Inventory Management
 Stocking high-frequency parts based on geography and usage.
 
-### Cost Optimization Strategies
+#### Cost Optimization Strategies
 Reassessing vendors for high-cost but low-frequency components.
 
-### Vehicle Lifecycle Planning
+#### Vehicle Lifecycle Planning
 Early identification of aging or problematic vehicles.
 
 ### Recommendations
