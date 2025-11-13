@@ -160,7 +160,7 @@ Insight: Certain components (filters, brakes, and sensors) appear in a high perc
 - Merged with a state geolocation dataset for mapping in Power BI
 - Used Python to surface the most problematic states:
 
-  ```python
+```python
   state_counts = df['state'].value_counts()
 print(state_counts.head())
 ```
