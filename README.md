@@ -243,7 +243,7 @@ These parts showed consistently high failure frequency, suggesting:
 - Possible suboptimal replacement intervals
 - Potential purchasing inefficiencies for commonly needed inventory
 
-📌 Insight: Optimizing the maintenance schedule and stocking these high-frequency parts could reduce downtime and supply delays.
+Insight: Optimizing the maintenance schedule and stocking these high-frequency parts could reduce downtime and supply delays.
 
 2. Regional Hotspots of Maintenance Activity
 
