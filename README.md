@@ -125,7 +125,7 @@ This analysis explores maintenance patterns, part failures, and operational tren
 - Handled missing values, standardized text fields, and converted date columns
 - Computed summary statistics to understand maintenance frequency, part usage, and vehicle distribution
 
-  import pandas as pd
+import pandas as pd
 
 df = pd.read_csv("FleetMaintenanceRecords.csv")
 df['date'] = pd.to_datetime(df['date'])
@@ -133,6 +133,7 @@ df['date'] = pd.to_datetime(df['date'])
 print(df.describe(include='all'))
 print("Unique Parts:", df['part_name'].nunique())
 print("Unique States:", df['state'].nunique())
+
 
 2. Part Failure & Maintenance Frequency
 
