@@ -18,7 +18,39 @@ CSV dataset of fleet maintenance logs including part IDs, service timestamps, mi
 
 - Power BI — Visualized part failures, regional trends, and maintenance patterns
   
-- Jupyter Notebook — Environment for exploratory and statistical analysis
+- Jupyter Notebook — Environment for exploratory and statistical analysis [Download Here](https://github.com/user-attachments/files/23532753/FleetMaintenance_Analysis.ipynb)
+
+## Data Cleaning & Preparation
+
+Before analysis, the **FleetMaintenanceRecords** dataset was cleaned and standardized to ensure accuracy and consistency across all tools (Excel, MySQL, Python, Power BI):
+
+1. **Loaded Raw Data**
+   - Imported `FleetMaintenanceRecords.csv` / `.xlsx` into Excel, MySQL, and Python (pandas).
+   - Verified row counts and column names matched across all environments.
+
+2. **Standardized Column Names**
+   - Renamed columns to use clear, consistent, and code-friendly names (e.g., `State`, `PartName`, `EventType`, `EventDate`).
+   - Removed extra spaces and special characters from headers.
+
+3. **Handled Missing & Invalid Values**
+   - Checked for blank cells and `NULL` values in key fields (state, part name, event type, event date).
+   - Removed rows with critical missing information that could not be reliably inferred.
+   - Validated event counts and date formats; corrected obvious data entry errors where possible.
+
+4. **Data Type Formatting**
+   - Converted date fields to proper date/datetime types.
+   - Ensured numeric fields (e.g., counts, mileage, cost if present) were stored as numeric types, not text.
+   - Standardized categorical values (e.g., consistent state abbreviations, part names, and event types).
+
+5. **Feature Preparation for Analysis**
+   - Created summary tables for:
+     - **Events by state**
+     - **Events by part name**
+     - **Events by event type / reason**
+   - Aggregated counts using GROUP BY in MySQL and `groupby()` in pandas for further visualization and reporting.
+
+These steps ensured the dataset was clean, consistent, and ready for analysis in Python, Excel pivot tables, SQL queries, and Power BI dashboards.
+
 
 
 
