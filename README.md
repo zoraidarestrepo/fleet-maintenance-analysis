@@ -182,7 +182,7 @@ monthly_events.rolling(3).mean().plot(title="3-Month Rolling Avg of Maintenance 
 - Combined groupby operations to reveal how part failures vary by geography
 - Exported pivot tables for Power BI dashboards
 
-  ```python
+```python
   pivot = pd.pivot_table(
     df,
     values='vehicle_id',
