@@ -414,3 +414,108 @@ Real-time monitoring improves accuracy in predicting failures.
 
 Recommendation:
 Connect telematics (GPS, engine diagnostics, temperature sensors) with maintenance records for continuous health tracking.
+
+### Limitations
+
+While the Fleet Maintenance analysis provides valuable insights, several limitations in the dataset and scope should be noted:
+
+1. Incomplete Data Fields
+
+The raw dataset contained missing or unspecified values in key columns such as:
+
+- Part name
+- Event type
+- Event date
+- State
+
+This can reduce the accuracy of frequency counts and trend analysis.
+
+2. No Vehicle-Level Identifiers
+
+The dataset does not include:
+- Vehicle ID
+- Mileage
+- Vehicle model year
+- Usage patterns
+
+Without these identifiers, it’s difficult to analyze:
+- Failure rates per vehicle
+- How mileage impacts part breakdowns
+- Vehicle-specific reliability
+
+3. Limited Time-Series Information
+
+Although dates were provided, the dataset lacks:
+- Service intervals
+- Repeat repairs per vehicle
+- Seasonal failure history over multiple years
+
+This restricts the ability to build robust predictive time-series models.
+
+4. No Cost Data
+
+There are no fields for:
+- Cost per repair
+- Labor cost
+- Total maintenance cost per vehicle
+  
+This prevents cost-based optimization, vendor benchmarking, and ROI analysis.
+
+5. Potential Data Entry Inconsistencies
+
+During cleaning, several inconsistencies were identified:
+- Mixed capitalization
+- Duplicate part names with slight spelling variations
+- Inconsistent event type labels
+- Typos and formatting issues
+
+These can introduce noise and bias into the analysis.
+
+6. No Environmental or Operational Context
+
+Key external factors are missing, such as:
+- Climate (temperature, humidity)
+- Route type (urban vs. highway)
+- Driver behavior
+- Load weight
+
+These factors heavily influence maintenance patterns but cannot be evaluated with the available data.
+
+7. Dataset Size May Limit Statistical Confidence
+
+The dataset provides meaningful patterns but may not be large enough for:
+- High-confidence prediction modeling
+- Rare part failure forecasting
+- Deep anomaly detection
+- More historical data would enhance the reliability of the insights.
+
+8. Aggregated Maintenance Events
+
+Some records represent grouped events instead of individual repairs. This limits:
+- Granular analysis of repair timelines
+- Root cause investigation
+- Detailed maintenance forecasting
+
+### References
+
+Fleet Maintenance Records Dataset – Internal coursework dataset provided by Southern New Hampshire University (SNHU) for data analytics and SQL analysis activities (Module Five – DAD 220).
+
+Pandas Documentation – Python Data Analysis Library.
+https://pandas.pydata.org/docs/
+
+NumPy Documentation – Numerical Computing with Python.
+https://numpy.org/doc/
+
+Matplotlib Documentation – Visualization library used for EDA charting.
+https://matplotlib.org/stable/index.html
+
+MySQL Reference Manual – SQL syntax, queries, and database schema design.
+https://dev.mysql.com/doc/
+
+Power BI Documentation – For building dashboards and visualizing fleet trends.
+https://learn.microsoft.com/en-us/power-bi/
+
+Python Official Documentation – For scripting, functions, and general programming structure.
+https://docs.python.org/3/
+
+SNHU Course Materials – DAD 220: Introduction to Data Analytics modules, templates, and lab instructions used for project design and analysis.
