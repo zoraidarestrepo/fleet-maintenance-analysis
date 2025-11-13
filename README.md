@@ -125,6 +125,7 @@ This analysis explores maintenance patterns, part failures, and operational tren
 - Handled missing values, standardized text fields, and converted date columns
 - Computed summary statistics to understand maintenance frequency, part usage, and vehicle distribution
 
+```python
 import pandas as pd
 
 df = pd.read_csv("FleetMaintenanceRecords.csv")
