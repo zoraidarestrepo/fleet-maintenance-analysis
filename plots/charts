@@ -1,0 +1,18 @@
+# Notebook Cell
+import os
+
+os.makedirs("plots", exist_ok=True)
+
+# Example: save top parts chart
+if "part_name" in df.columns:
+    top_parts = df["part_name"].value_counts().head(10)
+
+    plt.figure(figsize=(10, 5))
+    top_parts.plot(kind="bar")
+    plt.title("Top 10 Most Frequently Serviced Parts")
+    plt.xlabel("Part Name")
+    plt.ylabel("Number of Events")
+    plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
+    plt.savefig("plots/top_10_parts.png", dpi=300)
+    plt.close()
