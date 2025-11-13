@@ -134,6 +134,7 @@ df['date'] = pd.to_datetime(df['date'])
 print(df.describe(include='all'))
 print("Unique Parts:", df['part_name'].nunique())
 print("Unique States:", df['state'].nunique())
+```
 
 
 2. Part Failure & Maintenance Frequency
