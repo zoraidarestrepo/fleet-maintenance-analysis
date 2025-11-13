@@ -1,11 +1,23 @@
 # Fleet Maintenance Analysis
+
+### Overview
+
 Analyzed fleet maintenance records using MySQL to identify part failure trends, regional performance issues, and cost drivers. Performed data cleaning, JOIN operations, and aggregations, then visualized insights in Excel/Power BI to support predictive maintenance decisions.
 
-## Tech Stack: 
-MySQL, Excel, Power BI
+### Data Sources:
 
-## Overview:
-Analyzed fleet maintenance data to identify part replacement trends and regional performance issues. Used SQL for data cleaning and aggregation, then created Power BI dashboards for visualization.
+CSV dataset of fleet maintenance logs including part IDs, service timestamps, mileage, and regional repair data.
+
+### Tools:
+
+- MySQL — Imported and queried the fleet maintenance dataset
+- Python (Pandas, NumPy) — Data cleaning, transformation, and trend analysis
+- Excel — Initial data inspection and verification [Download Here](https://github.com/user-attachments/files/23528645/FleetMaintenanceRecords.xlsx)
+
+- Power BI — Visualized part failures, regional trends, and maintenance patterns
+- Jupyter Notebook — Environment for exploratory and statistical analysis
+
+
 
 ## Highlights:
 •	Imported and cleaned data using MySQL
