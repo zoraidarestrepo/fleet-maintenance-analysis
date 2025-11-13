@@ -51,17 +51,67 @@ Before analysis, the **FleetMaintenanceRecords** dataset was cleaned and standar
 
 These steps ensured the dataset was clean, consistent, and ready for analysis in Python, Excel pivot tables, SQL queries, and Power BI dashboards.
 
+## Exploratory Data Analysis (EDA)
 
+After cleaning and preparing the Fleet Maintenance dataset, exploratory data analysis (EDA) was performed using Python (pandas, NumPy), MySQL queries, Excel PivotTables, and Power BI. The goal was to uncover trends in part failures, maintenance activity, and regional patterns.
 
+### 1. Dataset Overview
+- Reviewed total number of maintenance records.
+- Identified key variables such as:
+  - **State**
+  - **Part Name**
+  - **Event Type**
+  - **Event Date**
+- Examined the distribution of events across time and locations.
 
-## Highlights:
-•	Imported and cleaned data using MySQL
-•	Identified cost and failure trends by region
-•	Built KPI dashboards in Power BI
+### 2. Frequency Analysis
+- Calculated the most frequently replaced parts.
+- Determined the states with the highest number of maintenance events.
+- Counted event types (e.g., inspections, repairs, replacements).
 
+### 3. Trend Analysis
+- Analyzed maintenance events over time to check for:
+  - Seasonal patterns
+  - Monthly/annual spikes in failures
+  - Increases or decreases in maintenance activity
 
-## Structure:
-/fleet-maintenance-data-analysis
- ├── /data              → FleetMaintenanceRecords.csv
- ├── /sql               → fleet_analysis_queries.sql
- └── /reports           → powerbi_dashboard
+### 4. State-Level Breakdown
+- Aggregated events by **state** to identify:
+  - Regions with unusually high part failures
+  - Areas requiring additional preventive maintenance resources
+
+### 5. Part Failure Patterns
+- Grouped by **Part Name** to identify:
+  - Components most likely to fail
+  - Any batch-specific or recurring issues
+- Compared high-failure parts across states to detect localized trends.
+
+### 6. Event Type Distribution
+- Visualized how many events belonged to each category:
+  - Repairs  
+  - Replacements  
+  - Inspections  
+  - Service checks  
+- Determined which event types are driving the majority of maintenance workload.
+
+### 7. Correlations & Insights
+- Looked for relationships such as:
+  - States with higher event counts also having frequent failures of specific parts.
+  - Certain months showing spikes in repairs (weather-related patterns).
+  - Parts with consistent recurring issues indicating long-term reliability problems.
+
+### 8. Visualizations (Python & Power BI)
+- Created:
+  - Bar charts of top failing parts
+  - State-by-state maintenance heatmaps
+  - Time-series plots of maintenance activity
+  - Event type distribution charts
+- Used these visuals to highlight actionable insights for operations teams.
+
+### Summary of Findings
+- **Certain parts** failed significantly more often than others, indicating potential design or usage issues.
+- **Specific states** had disproportionately high maintenance events, suggesting environmental or operational factors.
+- **Maintenance activity trends** showed identifiable seasonal or monthly spikes.
+
+The EDA phase provided a clear picture of the dataset and guided the deeper analysis performed in Python, SQL, and Power BI.
+
