@@ -1,4 +1,4 @@
-[fleet_maintenance_schema.sql](https://github.com/user-attachments/files/23528854/fleet_maintenance_schema.sql)[fleet_maintenance_schema.sql](https://github.com/user-attachments/files/23528833/fleet_maintenance_schema.sql)# Fleet Maintenance Analysis
+[fleet_maintenance_schema.sql](https://github.com/user-attachments/files/23528910/fleet_maintenance_schema.sql)[fleet_maintenance_schema.sql](https://github.com/user-attachments/files/23528854/fleet_maintenance_schema.sql)[fleet_maintenance_schema.sql](https://github.com/user-attachments/files/23528833/fleet_maintenance_schema.sql)# Fleet Maintenance Analysis
 
 ### Overview
 
@@ -10,7 +10,8 @@ CSV dataset of fleet maintenance logs including part IDs, service timestamps, mi
 
 ### Tools:
 
-- MySQL — Imported and queried the fleet maintenance dataset [Download Here][Uploa-- Create database ding fleet_maintenance_schema.sql…]()
+- MySQL — Imported and queried the fleet maintenance dataset [Download Here][Uploading fleet_maintenance_schema.sql…]()
+
 
 - Python (Pandas, NumPy) — Data cleaning, transformation, and trend analysis
 - Excel — Initial data inspection and verification [Download Here](https://github.com/user-attachments/files/23528645/FleetMaintenanceRecords.xlsx)
