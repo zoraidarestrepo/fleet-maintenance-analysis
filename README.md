@@ -121,16 +121,34 @@ This analysis explores maintenance patterns, part failures, and operational tren
 
 1. Descriptive Statistics
 
-- Total number of maintenance events
-- Counts of unique vehicles, parts, states, and event types
-- Summary statistics for numeric fields (e.g., cost, mileage, event count)
-- Date range and frequency of recorded maintenance events
+- Loaded and cleaned the FleetMaintenanceRecords dataset using Pandas
+- Handled missing values, standardized text fields, and converted date columns
+- Computed summary statistics to understand maintenance frequency, part usage, and vehicle distribution
+
+  import pandas as pd
+
+df = pd.read_csv("FleetMaintenanceRecords.csv")
+df['date'] = pd.to_datetime(df['date'])
+
+print(df.describe(include='all'))
+print("Unique Parts:", df['part_name'].nunique())
+print("Unique States:", df['state'].nunique())
 
 2. Part Failure & Maintenance Frequency
 
-- Identified the Top 10 most frequently serviced parts, revealing which components fail most often.
-- Calculated event distributions by event_type (e.g., repair, replacement, inspection).
-- Analyzed correlations between part failures and mileage (if available).
+- Identified Top 10 Most Replaced Parts using groupby operations
+- Calculated total event counts and analyzed the distribution across event types
+
+  top_parts = (
+    df.groupby('part_name')
+      .size()
+      .sort_values(ascending=False)
+      .head(10)
+)
+
+top_parts.plot(kind='barh', title='Top 10 Most Frequently Serviced Parts')
+
+Insight: Certain components (filters, brakes, and sensors) appear in a high percentage of service events, signaling high wear or sub-optimal replacement cycles.
 
 3. Geographic Insights
 
