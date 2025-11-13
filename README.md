@@ -115,3 +115,59 @@ After cleaning and preparing the Fleet Maintenance dataset, exploratory data ana
 
 The EDA phase provided a clear picture of the dataset and guided the deeper analysis performed in Python, SQL, and Power BI.
 
+### Data Analysis
+
+This analysis explores maintenance patterns, part failures, and operational trends across a fleet of vehicles using the FleetMaintenanceRecords dataset. The goal is to uncover high-frequency issues, regional problem areas, and opportunities for optimization.
+
+1. Descriptive Statistics
+
+- Total number of maintenance events
+- Counts of unique vehicles, parts, states, and event types
+- Summary statistics for numeric fields (e.g., cost, mileage, event count)
+- Date range and frequency of recorded maintenance events
+
+2. Part Failure & Maintenance Frequency
+
+- Identified the Top 10 most frequently serviced parts, revealing which components fail most often.
+- Calculated event distributions by event_type (e.g., repair, replacement, inspection).
+- Analyzed correlations between part failures and mileage (if available).
+
+3. Geographic Insights
+
+- Aggregated maintenance events by state to determine which regions experience the highest maintenance volume.
+- Generated a state-by-part heatmap to identify geographic clusters of recurring failures.
+- Highlighted states with potential environmental or usage-driven maintenance spikes.
+
+4. Time-Series Analysis
+
+- Resampled events monthly to visualize maintenance trends over time.
+- Detected seasonal patterns or unusual spikes in service activity.
+- Used rolling averages to smooth fluctuations and reveal long-term operational patterns.
+
+5. Cost Analysis (if cost data provided)
+
+- Calculated total, average, and state-level maintenance costs.
+- Identified the most expensive parts to service and states with the highest repair costs.
+- Highlighted parts that have high cost but low frequency, indicating potential inefficiencies.
+
+6. State × Part Analysis
+
+- Grouped records by state and part to find combinations with the highest event counts.
+- Useful for predicting regional part stocking needs and preventing downtime.
+
+7. Visual Insights (Python + Power BI)
+
+- Bar charts for top failing parts and state event counts
+- Line charts for monthly maintenance trends
+- Map visuals for regional failure density
+- Comparison charts for cost vs frequency
+
+These insights help maintenance teams:
+
+- Prioritize preventive maintenance
+- Improve inventory planning
+
+Reduce unexpected downtime
+
+- Optimize fleet reliability and cost efficiency
+
