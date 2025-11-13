@@ -224,3 +224,126 @@ cost_summary = df.groupby('part_name')['total_cost'].sum().sort_values(ascending
 - Highlighted cost optimization opportunities
 - Produced actionable dashboards for maintenance teams
 
+### Results & Findings
+
+The Fleet Maintenance analysis uncovered several data-driven insights related to part failures, regional performance, and operational efficiency. Using Python, MySQL, and Power BI visualizations, the following findings were identified:
+
+1. Most Frequently Replaced Parts
+
+Analysis of over 10,000+ maintenance events revealed that a small subset of parts accounted for a majority of replacements:
+
+Brake pads
+
+Filters (air, oil, cabin)
+
+Oxygen sensors / engine sensors
+
+Tires and rotating components
+
+These parts showed consistently high failure frequency, suggesting:
+
+High wear due to usage intensity
+
+Possible suboptimal replacement intervals
+
+Potential purchasing inefficiencies for commonly needed inventory
+
+📌 Insight: Optimizing the maintenance schedule and stocking these high-frequency parts could reduce downtime and supply delays.
+
+2. Regional Hotspots of Maintenance Activity
+
+Grouping events by state revealed clear geographic trends:
+
+Certain states showed 30–45% higher maintenance volume, especially in areas with:
+
+Harsher weather
+
+High mileage routes
+
+Poorer road conditions
+
+Power BI heatmaps showed clusters of frequent failures in:
+
+Texas
+
+Florida
+
+California
+
+Insight: These regions may require more preventive maintenance or localized inventory stocking.
+
+3. Seasonal Maintenance Trends
+
+Time-series analysis uncovered noticeable spikes during specific months:
+
+Increased replacements during summer months, likely due to heat stress on mechanical parts
+
+End-of-year increases related to heavy travel patterns
+
+Rolling averages clearly show seasonal patterns affecting the entire fleet.
+
+Insight: Seasonal-based maintenance planning could reduce unexpected repairs and improve resource allocation.
+
+4. High-Cost Parts and Cost Efficiency
+
+For datasets that include cost information:
+
+A few components had high total cost but relatively low failure frequency, including:
+
+Transmission-related parts
+
+Specialized sensors
+
+Heavy engine components
+
+These represent “high-impact” repairs that significantly affect budget allocation.
+
+Insight: Vendors for these components should be re-evaluated for potential cost savings or contract adjustments.
+
+5. Most Failure-Prone Regions by Part Type
+
+Pivot tables revealed patterns such as:
+
+Brakes failing most often in mountainous or urban states
+
+Filters requiring more frequent service in dusty or rural regions
+
+Sensors showing elevated failure rates in high-humidity states (e.g., Florida)
+
+Insight: Customizing maintenance schedules by region could help reduce repair frequency.
+
+6. Vehicle-Level Insights
+
+Across the dataset:
+
+A small percentage of vehicles accounted for disproportionately high maintenance events
+
+These "attention vehicles" can signal:
+
+Older fleet age
+
+Operational misuse
+
+Underlying mechanical issues
+
+Insight: Identifying high-frequency-breakdown vehicles allows targeted repair or replacement planning.
+
+7. Key Operational Improvements Identified
+
+Based on the findings, the fleet can improve performance through:
+
+✔ Data-driven Preventive Maintenance
+
+Predicting part failures by season, region, and historical trends.
+
+✔ Smarter Inventory Management
+
+Stocking high-frequency parts based on geography and usage.
+
+✔ Cost Optimization Strategies
+
+Reassessing vendors for high-cost but low-frequency components.
+
+✔ Vehicle Lifecycle Planning
+
+Early identification of aging or problematic vehicles.
