@@ -142,6 +142,7 @@ print("Unique States:", df['state'].nunique())
 - Identified Top 10 Most Replaced Parts using groupby operations
 - Calculated total event counts and analyzed the distribution across event types
 
+```python
   top_parts = (
     df.groupby('part_name')
       .size()
@@ -150,45 +151,76 @@ print("Unique States:", df['state'].nunique())
 )
 
 top_parts.plot(kind='barh', title='Top 10 Most Frequently Serviced Parts')
-
+```
 Insight: Certain components (filters, brakes, and sensors) appear in a high percentage of service events, signaling high wear or sub-optimal replacement cycles.
 
 3. Geographic Insights
 
-- Aggregated maintenance events by state to determine which regions experience the highest maintenance volume.
-- Generated a state-by-part heatmap to identify geographic clusters of recurring failures.
-- Highlighted states with potential environmental or usage-driven maintenance spikes.
+- Grouped and visualized maintenance events by state
+- Merged with a state geolocation dataset for mapping in Power BI
+- Used Python to surface the most problematic states:
+
+  ```python
+  state_counts = df['state'].value_counts()
+print(state_counts.head())
+```
 
 4. Time-Series Analysis
 
-- Resampled events monthly to visualize maintenance trends over time.
-- Detected seasonal patterns or unusual spikes in service activity.
-- Used rolling averages to smooth fluctuations and reveal long-term operational patterns.
+- Aggregated maintenance data by month to observe trends over time
+- Used rolling averages with NumPy to reveal long-term patterns
+
+```python
+df['month'] = df['date'].dt.to_period('M')
+monthly_events = df.groupby('month').size()
+
+monthly_events.rolling(3).mean().plot(title="3-Month Rolling Avg of Maintenance Events")
+```
 
 5. Cost Analysis (if cost data provided)
 
-- Calculated total, average, and state-level maintenance costs.
-- Identified the most expensive parts to service and states with the highest repair costs.
-- Highlighted parts that have high cost but low frequency, indicating potential inefficiencies.
+- Combined groupby operations to reveal how part failures vary by geography
+- Exported pivot tables for Power BI dashboards
+
+  ```python
+  pivot = pd.pivot_table(
+    df,
+    values='vehicle_id',
+    index='state',
+    columns='part_name',
+    aggfunc='count',
+    fill_value=0
+)
+
+pivot.to_csv("state_part_matrix.csv")
+```
 
 6. State × Part Analysis
 
-- Grouped records by state and part to find combinations with the highest event counts.
-- Useful for predicting regional part stocking needs and preventing downtime.
+- Computed cost totals and averages
+- Isolated parts with high cost but low frequency
+- Identified inefficiencies and potential vendor negotiation opportunities
 
-7. Visual Insights (Python + Power BI)
+```python
+df['total_cost'] = df['labor_cost'] + df['part_cost']
+cost_summary = df.groupby('part_name')['total_cost'].sum().sort_values(ascending=False)
+```
 
-- Bar charts for top failing parts and state event counts
-- Line charts for monthly maintenance trends
-- Map visuals for regional failure density
-- Comparison charts for cost vs frequency
+7. Tools & Features Used 
 
-These insights help maintenance teams:
+✔ Python (Pandas, NumPy) for cleaning, prep, EDA, and transformation
+✔ MySQL for structured queries and relational analysis
+✔ Jupyter Notebook for interactive exploration
+✔ Power BI for dashboards (maps, heatmaps, trends)
+✔ Excel for quick QA and supplemental analysis
+✔ Matplotlib/Seaborn for data visualizations in Notebook
+✔ CSV/Excel exports for sharing cleaned datasets and matrices
 
-- Prioritize preventive maintenance
-- Improve inventory planning
+8. Key Insights Delivered
 
-Reduce unexpected downtime
-
-- Optimize fleet reliability and cost efficiency
+- Identified the most failure-prone parts across the fleet
+- Detected regional hotspots of maintenance activity
+- Visualized seasonal/temporal trends that impact maintenance planning
+- Highlighted cost optimization opportunities
+- Produced actionable dashboards for maintenance teams
 
